@@ -1,0 +1,15 @@
+services:
+  custom:
+    env_file:
+      - .env
+    image: wonli/usersjs:${TAG}
+    container_name: "wonli-usersjs"
+    restart: always
+    ports:
+      - "8090:80" # <Port exposed> : <MySQL Port running inside container>
+    networks:
+      - usersjs-network
+
+networks:
+  usersjs-network:
+    driver: bridge
