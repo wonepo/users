@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Utilisateurs</title>
+  </head>
+  <body class="min-h-svh bg-slate-500" onload="loadDataAndInit()">
+
+    <main class="container mx-auto max-w-[960px] bg-red-400">
+      <div class="flex px-1 py-4 items-center justify-between">
+        <h1
+          class="text-2xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white"
+        >
+          Utilisateurs
+        </h1>
+
+        <div id="btn-group" class="inline-flex rounded-md shadow-sm w-40 sm:w-1/4" role="group">
+          <button
+            type="button"
+            name="btn-table"
+            class="w-1/2 py-2 text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-1 focus:ring-gray-500 focus:text-blue-700"
+          >
+            Table
+          </button>
+
+          <button
+            type="button"
+            name="btn-card"
+            class="w-1/2 py-2 text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-1 focus:ring-gray-500 focus:text-blue-700"
+          >
+            Card
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="py-4 px-1 bg-red-800 flex flex-col sm:flex-row gap-3 items-center justify-end sm:justify-between flex-wrap"
+      >
+        <input
+          class="block w-full sm:w-1/2 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+          type="text"
+          id="txt-search"
+          placeholder=""
+        />
+        
+        <select
+          id="slt-sort"
+          class="block w-40 sm:w-1/4 self-end rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+        >
+  <option value="-1" selected>Trié</option>
+  <option value="0">Nom</option>
+  <option value="1">Email</option>
+  <option value="2">Telephone</option>
+
+</select>
+
+      </div>
+
+      <div  id="root" class="pb-10"> 
+      </div>
+
+    </main>
+<script src="./scripts.js"></script>
+</body>
+</html>
