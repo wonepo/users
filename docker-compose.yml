@@ -8,8 +8,10 @@ services:
     ports:
       - "8090:80" # <Port exposed> : <MySQL Port running inside container>
     networks:
-      - usersjs-network
+      - proxy
+      - default
 
 networks:
-  usersjs-network:
-    driver: bridge
+  proxy:
+    external:
+      name: nginx-proxy
